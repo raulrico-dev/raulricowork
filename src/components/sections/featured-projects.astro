@@ -3,74 +3,90 @@ type Projects = {
     id: string | number,
     name: string,
     description: string,
+    outcome: string,
     cover_url: string,
-    tags: string[],
+    tags: string[
+      // Option A - product type
+
+      // * Platform
+      // * Dashboard
+      // * Website
+
+      // Option B — tech (clean)
+
+      // * Next.js
+      // * Supabase
+      // * Firebase
+
+      // Option C — hybrid (best)
+
+      // * Platform
+      // * Dashboard
+      // * Supabase
+    ],
     images: [
         { url: string, alt: string }
     ],
     external_url: string
 }
+
 const projects = [
-    {
-        id: "ceducap",
-        name: "Ceducap",
-        description: "",
-        tags: [
-            "Landing",
-            "Dashboard",
-            "BlockChain",
-            "Supabase",
-        ],
-        cover_url: "",
-        images: [],
-        external_url: "https://ceducap.mx"
-    },
-    {
-        id: "raulricomusic",
-        name: "Raul Rico",
-        description: "",
-        tags: [
-            "Landing",
-        ],
-        cover_url: "",
-        images: [],
-        external_url: "https://raulricomusic.com"
-    },
-    {
-        id: "gb-properties",
-        name: "GB Properties",
-        description: "",
-        tags: [
-            "Landing",
-            "Dashboard",
-            "BlockChain",
-            "Firebase",
-        ],
-        cover_url: "",
-        images: [],
-        external_url: "https://gbproperties.io"
-    },
-    {
-        id: "dmsnrecords",
-        name: "DMSN Records",
-        description: "",
-        tags: [
-            "Landing",
-            "Dashboard",
-            "Supabase",
-        ],
-        cover_url: "",
-        images: [],
-        external_url: "https://dmsnrecords.com"
-    },
-]
+  {
+    id: "ceducap",
+    name: "Ceducap",
+    description:
+      "Platform to manage employee training and certifications with admin dashboards and structured data tracking.",
+    outcome:
+      "Built to centralize training operations and ensure scalable management of users and content.",
+    tags: ["Platform", "Dashboard", "Supabase"],
+    cover_url: "",
+    images: [],
+    external_url: "https://ceducap.mx",
+  },
+  {
+    id: "raulricomusic",
+    name: "RaulRico Music",
+    description:
+      "Personal website to showcase content, releases, and brand presence with a fast and responsive frontend.",
+    outcome:
+      "Designed for performance and clear content delivery across devices.",
+    tags: ["Website"],
+    cover_url: "",
+    images: [],
+    external_url: "https://raulricomusic.com",
+  },
+  {
+    id: "gb-properties",
+    name: "GB Properties",
+    description:
+      "Real estate platform with admin dashboard to manage listings, clients, and internal operations.",
+    outcome:
+      "Streamlines property management and improves internal workflow efficiency.",
+    tags: ["Platform", "Dashboard", "Firebase"],
+    cover_url: "",
+    images: [],
+    external_url: "https://gbproperties.io",
+  },
+  {
+    id: "dmsnrecords",
+    name: "DMSN Records",
+    description:
+      "Content platform with admin dashboard to manage artists, releases, and digital assets.",
+    outcome:
+      "Centralizes content management and supports scalable growth of the platform.",
+    tags: ["Platform", "Dashboard", "Supabase"],
+    cover_url: "",
+    images: [],
+    external_url: "https://dmsnrecords.com",
+  },
+];
 ---
 
-<article class="py-24 px-6 max-w-5xl mx-auto">
+<article class="py-24 px-6 max-w-7xl mx-auto">
 
-    <header class="mb-16">
-      <p class="text-xs font-semibold tracking-widest text-gray-400 uppercase mb-3">Selected Work</p>
-      <h2 class="text-3xl font-bold text-gray-900">Top Projects</h2>
+    <header class="mb-16 flex flex-col items-center justify-center">
+      <p class="text-xs font-semibold font-dm tracking-widest text-slate-400 uppercase mb-3">Selected Work</p>
+      <h2 class="text-3xl font-bold text-indigo-950 font-dm">Top Projects</h2>
     </header>
   
     <section>
@@ -80,10 +96,10 @@ const projects = [
           <li class="group block">
 
               <!-- Cover -->
-              <div class="relative w-full aspect-9/6 bg-gray-100 overflow-hidden">
+              <div class="relative w-full aspect-9/6 bg-slate-100 overflow-hidden">
                 {item.cover_url
                   ? <img src={item.cover_url} alt={item.name} class="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-500 ease-out" />
-                  : <div class="w-full h-full bg-gradient-to-br from-indigo-50 to-purple-50" />
+                  : <div class="w-full h-full -bg-linear-120 from-indigo-50 to-purple-50" />
                 }
                 <!-- Subtle dark overlay on hover -->
                 <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300" />
@@ -92,7 +108,7 @@ const projects = [
                   
                   <!-- external link -->
                   <a href={item.external_url} target="_blank" rel="noopener noreferrer" 
-                  class="inline-flex items-center justify-center w-7 h-7 rounded-full bg-white text-gray-900">
+                  class="inline-flex items-center justify-center w-7 h-7 rounded-full bg-white text-indigo-950">
                     <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                       <path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                     </svg>
@@ -104,14 +120,17 @@ const projects = [
               <!-- Content -->
               <div class="pt-3 pb-8 flex flex-col gap-2">
                 <div>
-                  <h3 class="text-sm font-semibold text-gray-900 group-hover:text-indigo-600 transition-colors duration-200">{item.name}</h3>
+                  <h3 class="text-sm font-semibold text-indigo-950 group-hover:text-indigo-600 transition-colors duration-200">{item.name}</h3>
                   {item.description && (
-                    <p class="text-sm text-gray-400 mt-0.5 line-clamp-1">{item.description}</p>
+                    <p class="text-sm text-slate-600 mt-0.5 line-clamp-2">{item.description}</p>
+                  )}
+                  {item.outcome && (
+                    <p class="text-xs text-slate-400 mt-1 line-clamp-3">{item.outcome}</p>
                   )}
                 </div>
-                <div class="flex flex-wrap gap-1 shrink-0 mt-0.5">
+                <div class="flex flex-wrap gap-1 shrink-0 mt-2">
                   {item.tags.map((tag) => (
-                    <span key={tag} class="text-xs text-gray-400 border border-gray-200 px-2 py-0.5 rounded-full">
+                    <span class="text-xs text-slate-500 bg-white border border-slate-100 px-2.5 py-0.5 rounded-full">
                       {tag}
                     </span>
                   ))}
@@ -122,6 +141,19 @@ const projects = [
         ))}
   
       </ul>
+
+      <div class="flex justify-center items-center gap-4 mt-8">
+        <a
+            href="#"
+            class="shrink-0 rounded-full h-12 p-px bg-linear-36 from-indigo-500 to-cyan-500"
+        >
+            <div class="w-full h-full min-w-max px-8 py-3 inline-flex items-center justify-center space-x-2 rounded-full text-indigo-950 hover:text-indigo-700 bg-white transition-colors duration-200">
+                <span class="text-sm font-medium"
+                    >See All Projects</span
+                >
+            </div>
+        </a>
+    </div>
     </section>
   
   </article>
