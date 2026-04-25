@@ -1,0 +1,61 @@
+---
+import GridBackground from "@/components/ui/grid-background.astro";
+---
+
+<section id="top" class="relative w-full h-screen flex flex-col">
+    <GridBackground />
+
+    <div
+        class="relative w-full max-w-7xl min-h-max m-auto flex flex-col items-center justify-center px-6 py-16"
+    >
+        <div class="mx-auto flex flex-col items-center justify-center">
+            <span
+                class="text-sm font-normal text-center font-dm text-slate-900 bg-white/50 border border-indigo-100 drop-shadow-[0_8px_4px] drop-shadow-indigo-200/25 backdrop-blur-sm px-4 py-2 rounded-full"
+            >
+                Ux/Ui - Web - Mobile - Blockchain
+            </span>
+            <div class="mt-4 flex flex-col items-center justify-center gap-2">
+                <p
+                    class="text-center text-indigo-950 text-[clamp(2rem,6vw,3.5rem)] font-semibold leading-[1.05] tracking-[1.05] font-dm"
+                >
+                    <span class="block">Product Designer</span>
+                    <span class="block"
+                        >Specialized in <span class="text-indigo-600">
+                            Web Technologies
+                        </span>
+                    </span>
+                </p>
+                <p
+                    class="text-center text-slate-500 text-[clamp(1.15rem,4vw,1.5rem)] font-medium leading-tight tracking-[1.05]"
+                >
+                    Turning ideas into fast, scalable digital products
+                </p>
+            </div>
+            <div class="flex justify-center items-center gap-4 mt-6">
+                <a
+                    href="#portfolio"
+                    class="rounded-full p-px bg-linear-36 from-purple-500 to-cyan-500"
+                >
+                    <div class="px-6 py-3 inline-flex items-center space-x-2 rounded-full text-white bg-indigo-600/80 hover:bg-indigo-600 transition-colors duration-200">
+                        <span class="text-base font-medium"
+                            >See My Portfolio</span
+                        >
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke-width="2"
+                            stroke="currentColor"
+                            class="size-5"
+                        >
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"></path>
+                        </svg>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,64 @@
+---
+const metrics = [
+    {
+        id: 1,
+        title: "Years of Experience",
+        description: "Designing and shipping web products.",
+        value: "10+",
+    },
+    {
+        id: 2,
+        title: "Projects Completed",
+        description: "From prototypes to production apps.",
+        value: "24+",
+    },
+    {
+        id: 3,
+        title: "Happy Clients",
+        description: "Long-term partners and teams.",
+        value: "100+",
+    },
+    {
+        id: 4,
+        title: "Worked With",
+        description: "Startups and established orgs.",
+
+        value: "10+",
+    },
+];
+---
+
+<section
+    aria-label="Key metrics"
+    class="relative w-full max-w-7xl m-auto px-6 pb-20"
+>
+    <div class="mx-auto w-full">
+        <div
+            class="rounded-2xl border border-white/10 bg-white/2 backdrop-blur-sm"
+        >
+            <ul class="grid grid-cols-2 lg:grid-cols-4 gap-6 divide-y divide-white/10 md:divide-y-0 md:divide-x">
+                {
+                    metrics.map((metric) => (
+                        <li class="p-6 md:p-8 relative first:lg:[&>span]:hidden">
+                            <span class="h-full w-0.5 bg-slate-200 absolute left-0 block"></span>
+                            <div class="flex items-baseline justify-between gap-6">
+                                <div class="font-dm text-3xl md:text-4xl font-semibold tracking-tight text-indigo-900">
+                                    {metric.value}
+                                </div>
+                            </div>
+
+                            <div class="mt-4">
+                                <div class="text-sm font-dm font-semibold tracking-wide text-slate-600">
+                                    {metric.title}
+                                </div>
+                                <div class="mt-0 text-sm leading-relaxed text-slate-400">
+                                    {metric.description}
+                                </div>
+                            </div>
+                        </li>
+                    ))
+                }
+            </ul>
+        </div>
+    </div>
+</section>

@@ -1,5 +1,5 @@
 // @ts-check
-import { defineConfig } from 'astro/config';
+import { defineConfig, fontProviders } from 'astro/config';
 
 import react from '@astrojs/react';
 import tailwindcss from '@tailwindcss/vite';
@@ -13,5 +13,18 @@ export default defineConfig({
     plugins: [tailwindcss()]
   },
 
-  adapter: cloudflare()
+  adapter: cloudflare(),
+
+  fonts: [
+    {
+      name: "DM Sans",
+      provider: fontProviders.google(), // Or fontProviders.fontsource()
+      cssVariable: "--font-dm-sans",
+    },
+    {
+      name: "Elms Sans",
+      provider: fontProviders.google(),
+      cssVariable: "--font-elms-sans",
+    },
+  ]
 });

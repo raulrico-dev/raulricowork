@@ -1,1 +1,12 @@
 @import "tailwindcss";
+
+@theme inline {
+  --font-dm: "DM Sans", sans-serif;
+  --font-elms: "Elms Sans", sans-serif;
+}
+
+@layer base {
+  body {
+    @apply min-h-screen w-full overflow-x-hidden text-slate-800 font-elms;
+  }
+}
