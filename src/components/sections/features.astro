@@ -1,25 +1,39 @@
 ---
 const features = [
-    {
-        id: 1,
-        icon: "🚀",
-        title: "Brand Strategy",
-        description:
-            "We help you define your brand's unique value proposition and positioning.",
-    },
-    {
-        id: 2,
-        icon: "🎨",
-        title: "Brand Identity",
-        description:
-            "We help you create a consistent and recognizable brand identity.",
-    },
+  {
+    id: 1,
+    icon: "🚀",
+    title: "Web Platforms",
+    description:
+      "Full-stack applications designed to handle users, data, and business logic at scale.",
+  },
+  {
+    id: 2,
+    icon: "📊",
+    title: "Dashboards & Tools",
+    description:
+      "Custom dashboards to manage operations, users, and real-time data in one place.",
+  },
+  {
+    id: 3,
+    icon: "⚙️",
+    title: "Digital Infrastructure",
+    description:
+      "Authentication, APIs, and database systems built for performance and reliability.",
+  },
+  {
+    id: 4,
+    icon: "🧩",
+    title: "Product Development",
+    description:
+      "From idea to production, building products ready for real-world use.",
+  },
 ];
 ---
 
 <article class="py-24 px-6 max-w-7xl mx-auto">
     <div class="flex flex-col md:flex-row items-start gap-8 w-full">
-        <section class="flex-1">
+        <section class="flex-1 md:sticky top-24">
             <header class="flex flex-col items-start justify-center">
                 <p
                     class="text-xs font-semibold font-dm tracking-widest text-slate-400 uppercase mb-3"
@@ -44,7 +58,7 @@ const features = [
                     <div
                         class="w-full h-full min-w-max px-8 pr-6 py-3 inline-flex items-center justify-center space-x-2 rounded-full text-indigo-50 hover:text-white bg-indigo-600 transition-colors duration-200"
                     >
-                        <span class="text-sm font-semibold tracking-wider"
+                        <span class="text-sm font-dm font-semibold tracking-wider"
                             >Get in touch</span
                         >
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="size-4">
@@ -56,11 +70,11 @@ const features = [
         </section>
 
         <section class="flex-1">
-            <ul class="space-y-4">
+            <ul class="space-y-6">
                 {features.map((feature) => (
                         <li>
-                            <div class="group flex flex-col items-start justify-start gap-4">
-                                <div class="">
+                            <div class="group flex flex-col md:flex-row items-start justify-start gap-4 border-b border-indigo-50 py-3">
+                                <div class="w-10 h-10 bg-indigo-50 shrink-0 flex items-center justify-center rounded-lg">
                                     {feature.icon}
                                 </div>
                                 <div class="flex flex-col items-start justify-center">
