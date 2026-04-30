@@ -1,0 +1,80 @@
+---
+const features = [
+    {
+        id: 1,
+        icon: "🚀",
+        title: "Brand Strategy",
+        description:
+            "We help you define your brand's unique value proposition and positioning.",
+    },
+    {
+        id: 2,
+        icon: "🎨",
+        title: "Brand Identity",
+        description:
+            "We help you create a consistent and recognizable brand identity.",
+    },
+];
+---
+
+<article class="py-24 px-6 max-w-7xl mx-auto">
+    <div class="flex flex-col md:flex-row items-start gap-8 w-full">
+        <section class="flex-1">
+            <header class="flex flex-col items-start justify-center">
+                <p
+                    class="text-xs font-semibold font-dm tracking-widest text-slate-400 uppercase mb-3"
+                >
+                    Empowering Businesses
+                </p>
+                <h2 class="text-3xl font-bold text-indigo-950 font-dm mb-4">
+                    My Core Capabilities
+                </h2>
+                <p class="text-slate-600">
+                    Your business needs results, not complexity.
+                </p>
+                <p class="text-slate-600">
+                    Ready to improve your business?
+                </p>
+            </header>
+            <div class="flex justify-start items-center gap-4 mt-4">
+                <a
+                    href="#contact"
+                    class="shrink-0 rounded-full h-12 p-px bg-linear-36 from-indigo-600 to-indigo-600"
+                >
+                    <div
+                        class="w-full h-full min-w-max px-8 pr-6 py-3 inline-flex items-center justify-center space-x-2 rounded-full text-indigo-50 hover:text-white bg-indigo-600 transition-colors duration-200"
+                    >
+                        <span class="text-sm font-semibold tracking-wider"
+                            >Get in touch</span
+                        >
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="size-4">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
+                          </svg>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <section class="flex-1">
+            <ul class="space-y-4">
+                {features.map((feature) => (
+                        <li>
+                            <div class="group flex flex-col items-start justify-start gap-4">
+                                <div class="">
+                                    {feature.icon}
+                                </div>
+                                <div class="flex flex-col items-start justify-center">
+                                    <div class="text-lg font-semibold font-dm">
+                                        {feature.title}
+                                    </div>
+                                    <div class="text-sm text-slate-500">
+                                        {feature.description}
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    ))}
+            </ul>
+        </section>
+    </div>
+</article>
