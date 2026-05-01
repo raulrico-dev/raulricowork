@@ -84,10 +84,20 @@ const projects = [
 
 <article class="py-24 px-6 max-w-7xl mx-auto">
 
-    <header class="mb-16 flex flex-col items-center justify-center">
-      <p class="text-xs font-semibold font-dm tracking-widest text-slate-400 uppercase mb-3">Selected Work</p>
-      <h2 class="text-3xl font-bold text-indigo-950 font-dm">Top Projects</h2>
-    </header>
+    <!-- Header -->
+
+  <header class="mb-16 flex flex-col items-center text-center">
+    <span class="text-xs font-semibold font-dm tracking-widest text-slate-400 uppercase mb-3">
+      Selected Work
+    </span>
+    <h2 class="text-3xl font-bold text-indigo-950 font-dm mb-4">
+      Systems I've Built
+    </h2>
+    <p class="text-slate-600 max-w-md">
+      Real-world platforms, dashboards, and systems designed to handle users, data, and operations.
+    </p>
+
+  </header>
   
     <section>
       <ul class="grid grid-cols-2 lg:grid-cols-4 gap-4">
@@ -118,15 +128,17 @@ const projects = [
               </div>
   
               <!-- Content -->
-              <div class="pt-3 pb-8 flex flex-col gap-2">
+              <div class="pt-3 pb-8 px-1 flex flex-col gap-2">
                 <div>
                   <h3 class="text-sm font-semibold text-indigo-950 group-hover:text-indigo-600 transition-colors duration-200">{item.name}</h3>
                   {item.description && (
-                    <p class="text-sm text-slate-600 mt-0.5 line-clamp-2">{item.description}</p>
+                    <p class="text-sm text-slate-600 mt-0.5 line-clamp-2">{item.outcome}</p>
                   )}
-                  {item.outcome && (
-                    <p class="text-xs text-slate-400 mt-1 line-clamp-3">{item.outcome}</p>
-                  )}
+                  {/* {item.outcome && (
+                      <p class="text-xs text-slate-400 group-hover:text-slate-600 transition-colors duration-200">
+                      {item.outcome}
+                    </p>
+                  )} */}
                 </div>
                 <div class="flex flex-wrap gap-1 shrink-0 mt-2">
                   {item.tags.map((tag) => (
