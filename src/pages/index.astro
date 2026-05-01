@@ -4,11 +4,19 @@ import RootLayout from "@/layouts/root-layout.astro";
 import Metrics from "@/components/sections/metrics.astro";
 import FeaturedProjects from "@/components/sections/featured-projects.astro";
 import Features from "@/components/sections/features.astro";
+import Process from "@/components/sections/process.astro";
 ---
 
 <RootLayout>
-	<Hero />
-	<Metrics />
-	<FeaturedProjects />
-	<Features />
+	<main>
+		<Hero />
+		<Metrics />
+		<FeaturedProjects />
+		<div class="bg-indigo-50/50">
+			<Features />
+		</div>
+		<div class="bg-indigo-50/50-">
+			<Process />
+		</div>
+	</main>
 </RootLayout>

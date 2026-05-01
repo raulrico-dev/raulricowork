@@ -1,0 +1,94 @@
+---
+import ProcessGrid from "../modules/process-grid.astro";
+
+const process = [
+  {
+    id: 1,
+    step: "01",
+    title: "Understand",
+    description:
+      "Define the problem, requirements, and system scope to ensure clarity before building.",
+  },
+  {
+    id: 2,
+    step: "02",
+    title: "Design",
+    description:
+      "Plan the architecture, data flow, and user experience with scalability in mind.",
+  },
+  {
+    id: 3,
+    step: "03",
+    title: "Build",
+    description:
+      "Develop the system using modern technologies with a focus on performance and reliability.",
+  },
+  {
+    id: 4,
+    step: "04",
+    title: "Launch",
+    description:
+      "Deploy, test, and refine the product to ensure it works in real-world conditions.",
+  },
+];
+---
+
+<article class="py-24 px-6 max-w-7xl mx-auto">
+  <div class="flex flex-col items-center gap-16 w-full">
+
+    <!-- Header -->
+    <header class="flex flex-col items-center text-center max-w-xl">
+      <span class="text-xs font-semibold tracking-widest text-slate-400 uppercase mb-3">
+        Process
+      </span>
+
+      <h2 class="text-3xl font-bold text-indigo-950 font-dm mb-4">
+        How I work
+      </h2>
+
+      <p class="text-slate-600">
+        A structured approach to building systems that are reliable,
+        scalable, and ready for real-world use.
+      </p>
+    </header>
+
+    <!-- Timeline -->
+    <section class="relative w-full max-w-4xl">
+
+      <!-- Vertical line (desktop) -->
+      <div class="hidden md:block absolute left-1/2 top-0 h-full w-0.5 bg-linear-0 from-transparent via-indigo-200 to-transparent -translate-x-1/2"></div>
+
+      <ul class="flex flex-col gap-12">
+        {
+          process.map((item: any, index: number) => (
+            <li class={`relative flex flex-col md:flex-row items-center md:items-start gap-6 ${index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"}`}>
+
+              <!-- Step number -->
+              <div class="relative z-10 flex items-center justify-center w-12 h-12 rounded-full bg-indigo-600 text-white font-semibold font-dm shadow-md">
+                {item.step}
+              </div>
+
+              <!-- Content card -->
+              <div class="w-full md:w-1/2">
+                <div class="p-6 rounded-xl border border-indigo-100 bg-white/70 backdrop-blur-sm shadow-sm hover:shadow-md transition-shadow duration-300">
+                  
+                  <h3 class="text-lg font-semibold font-dm text-indigo-950 mb-1">
+                    {item.title}
+                  </h3>
+
+                  <p class="text-sm text-slate-600 leading-relaxed">
+                    {item.description}
+                  </p>
+
+                </div>
+              </div>
+
+            </li>
+          ))
+        }
+      </ul>
+
+    </section>
+
+  </div>
+</article>
