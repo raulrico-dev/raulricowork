@@ -1,22 +1,20 @@
 ---
-import Hero from "@/components/sections/hero.astro";
+import HeroSection from "@/components/sections/hero-section.astro";
 import RootLayout from "@/layouts/root-layout.astro";
-import Metrics from "@/components/sections/metrics.astro";
+import MetricsSection from "@/components/sections/metrics-section.astro";
 import FeaturedProjects from "@/components/sections/featured-projects.astro";
-import Features from "@/components/sections/features.astro";
-import Process from "@/components/sections/process.astro";
+import FeaturesSection from "@/components/sections/features-section.astro";
+import ProcessSection from "@/components/sections/process-section.astro";
+import ContactSection from "@/components/sections/contact-section.astro";
 ---
 
 <RootLayout>
 	<main>
-		<Hero />
-		<Metrics />
+		<HeroSection />
+		<MetricsSection />
 		<FeaturedProjects />
-		<div class="bg-indigo-50/50">
-			<Features />
-		</div>
-		<div class="bg-indigo-50/50-">
-			<Process />
-		</div>
+		<FeaturesSection />
+		<ProcessSection />
+		<ContactSection />
 	</main>
 </RootLayout>
