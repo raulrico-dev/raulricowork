@@ -1,6 +1,7 @@
 ---
 import "@/styles/global.css";
 import FooterSection from "@/components/sections/footer-section.astro";
+import ContactSection from "@/components/sections/contact-section.astro";
 
 const {
     title,
@@ -20,6 +21,7 @@ const {
 	</head>
 	<body>
 		<slot />
+		<ContactSection />
 		<FooterSection />
 	</body>
 </html>
