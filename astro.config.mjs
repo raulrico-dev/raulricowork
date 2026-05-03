@@ -13,8 +13,9 @@ export default defineConfig({
     plugins: [tailwindcss()]
   },
 
+  output: 'server',
   adapter: cloudflare(),
-
+  
   fonts: [
     {
       name: "DM Sans",
