@@ -1,6 +1,8 @@
 {
 	"compatibility_date": "2026-04-24",
-	"compatibility_flags": ["global_fetch_strictly_public"],
+	"compatibility_flags": [
+		"global_fetch_strictly_public"
+	],
 	"name": "raulricowork",
 	"main": "@astrojs/cloudflare/entrypoints/server",
 	"assets": {
@@ -9,5 +11,12 @@
 	},
 	"observability": {
 		"enabled": true
-	}
+	},
+	"d1_databases": [
+		{
+			"binding": "raulrico_work",
+			"database_name": "raulrico-work",
+			"database_id": "4020d70a-6202-47e0-87e3-b356d19ac46a"
+		}
+	]
 }
