@@ -1,5 +1,6 @@
 ---
 // TODO: Add social media links and update the email
+import { MY_DESCRIPTION, MY_EMAIL, MY_LOCATION, MY_NAME } from "@/lib/constants/my_data";
 ---
 
 <footer class="mt-24 border-t border-indigo-100">
@@ -10,15 +11,15 @@
         <!-- Brand / Identity -->
         <div class="flex flex-col gap-4 max-w-sm">
           <h3 class="text-lg font-semibold font-dm text-indigo-950">
-            Raul Rico
+            {MY_NAME}
           </h3>
   
           <p class="text-sm text-slate-600 leading-relaxed">
-            Full-stack developer building digital systems, platforms, and tools for real-world use.
+            {MY_DESCRIPTION}
           </p>
   
           <p class="text-xs text-slate-400">
-            Based in Mexico · Available for selected projects
+            Based in {MY_LOCATION} · Available for selected projects
           </p>
         </div>
   
@@ -55,8 +56,8 @@
   
           <ul class="flex flex-col gap-2 text-sm text-slate-600">
             <li>
-              <a href="mailto:raulrico@gmail.com" class="hover:text-indigo-600 transition-colors">
-                raulrico@gmail.com
+              <a href={`mailto:${MY_EMAIL}`} class="hover:text-indigo-600 transition-colors">
+                {MY_EMAIL}
               </a>
             </li>
             <!-- <li>
@@ -78,7 +79,7 @@
       <div class="mt-16 pt-6 border-t border-indigo-100 flex flex-col md:flex-row items-center justify-between gap-4">
   
         <p class="text-xs text-slate-400">
-          © {new Date().getFullYear()} Raul Rico. All rights reserved.
+          &#xa9; {new Date().getFullYear()} {MY_NAME}. All rights reserved.
         </p>
   
         <p class="text-xs text-slate-400">

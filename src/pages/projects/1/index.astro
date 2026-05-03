@@ -1,0 +1,151 @@
+---
+import RootLayout from "@/layouts/root-layout.astro";
+
+const project = {
+    id: "ceducap",
+    name: "Ceducap",
+    description:
+      "Training management platform for businesses, with dashboards to manage employees, courses, and certification tracking using blockchain verification.",
+    outcome:
+      "Simplifies employee training workflows and ensures verifiable certification records.",
+    tags: ["Platform", "Dashboard", "Supabase"],
+    cover_url: "",
+    images: [],
+    external_url: "https://ceducap.mx",
+  }
+---
+<RootLayout>
+  <main>
+    <article class="py-24 px-6 max-w-5xl mx-auto">
+    
+      <!-- HEADER -->
+      <header class="mb-16">
+        <div class="flex flex-col gap-4">
+    
+          <div class="flex flex-wrap gap-2">
+            {project.tags.map((tag) => (
+              <span class="text-xs text-slate-500 bg-white border border-slate-100 px-2.5 py-1 rounded-full">
+                {tag}
+              </span>
+            ))}
+          </div>
+    
+          <h1 class="text-4xl font-bold text-indigo-950 font-dm leading-tight">
+            {project.name}
+          </h1>
+    
+          <p class="text-lg text-slate-600 max-w-2xl">
+            {project.description}
+          </p>
+    
+          <div class="mt-4">
+            <a
+              href={project.external_url}
+              target="_blank"
+              class="inline-flex items-center gap-2 text-sm font-semibold text-indigo-600 hover:text-indigo-800"
+            >
+              View Live →
+            </a>
+          </div>
+    
+        </div>
+      </header>
+    
+      <!-- OVERVIEW -->
+      <section class="mb-16">
+        <h2 class="text-xl font-semibold text-indigo-950 mb-4">Overview</h2>
+    
+        <p class="text-slate-600 leading-relaxed">
+          {project.description}
+        </p>
+      </section>
+    
+      <!-- SYSTEM BREAKDOWN -->
+      <section class="mb-16">
+        <h2 class="text-xl font-semibold text-indigo-950 mb-6">
+          System Overview
+        </h2>
+    
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+    
+          <div class="p-5 border border-indigo-100 rounded-xl bg-white/60">
+            <h3 class="text-sm font-semibold text-indigo-900 mb-2">Users</h3>
+            <p class="text-sm text-slate-600">
+              Admins and end users interacting with the platform.
+            </p>
+          </div>
+    
+          <div class="p-5 border border-indigo-100 rounded-xl bg-white/60">
+            <h3 class="text-sm font-semibold text-indigo-900 mb-2">Data</h3>
+            <p class="text-sm text-slate-600">
+              Structured data including entities, relationships, and workflows.
+            </p>
+          </div>
+    
+          <div class="p-5 border border-indigo-100 rounded-xl bg-white/60">
+            <h3 class="text-sm font-semibold text-indigo-900 mb-2">Operations</h3>
+            <p class="text-sm text-slate-600">
+              Core logic handling user actions, updates, and system processes.
+            </p>
+          </div>
+    
+        </div>
+      </section>
+    
+      <!-- KEY FEATURES -->
+      <section class="mb-16">
+        <h2 class="text-xl font-semibold text-indigo-950 mb-6">
+          Key Features
+        </h2>
+    
+        <ul class="space-y-3">
+          <li class="text-slate-600">• Admin dashboard for managing data</li>
+          <li class="text-slate-600">• Authentication and user roles</li>
+          <li class="text-slate-600">• Real-time or structured data handling</li>
+          <li class="text-slate-600">• Scalable architecture</li>
+        </ul>
+      </section>
+    
+      <!-- TECH STACK -->
+      <section class="mb-16">
+        <h2 class="text-xl font-semibold text-indigo-950 mb-4">
+          Tech Stack
+        </h2>
+    
+        <div class="flex flex-wrap gap-2">
+          {project.tags.map((tag) => (
+            <span class="text-sm text-slate-600 bg-white border border-slate-100 px-3 py-1 rounded-full">
+              {tag}
+            </span>
+          ))}
+        </div>
+      </section>
+    
+      <!-- OUTCOME -->
+      <section class="mb-20">
+        <h2 class="text-xl font-semibold text-indigo-950 mb-4">
+          Outcome
+        </h2>
+    
+        <p class="text-indigo-600 font-medium text-lg leading-relaxed">
+          {project.outcome}
+        </p>
+      </section>
+    
+      <!-- CTA -->
+      <section class="text-center">
+        <p class="text-slate-600 mb-4">
+          Interested in building something similar?
+        </p>
+    
+        <a
+          href="/#contact"
+          class="inline-flex items-center justify-center px-8 h-12 rounded-full bg-indigo-600 text-white text-sm font-semibold hover:bg-indigo-700 transition-colors"
+        >
+          Start a project
+        </a>
+      </section>
+    
+    </article>
+  </main>
+</RootLayout>

@@ -1,4 +1,6 @@
 ---
+import { MY_EMAIL } from "@/lib/constants/my_data";
+
 
 ---
 
@@ -68,8 +70,8 @@
       <!-- email fallback -->
       <p class="text-xs text-slate-400 mt-4">
         Or reach out directly at <a
-          href="mailto:raulrico@gmail.com"
-          class="text-indigo-600">raulrico@gmail.com</a
+          href={`mailto:${MY_EMAIL}`}
+          class="text-indigo-600">{MY_EMAIL}</a
         >
       </p>
     </div>
